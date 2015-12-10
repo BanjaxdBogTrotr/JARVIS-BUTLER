@@ -24,6 +24,6 @@ A speech recognition program designed to respond, give news updates, and enact s
 ****NOTES****
 I set grammarPath and grammarName to "" because Voce automatically chooses the default grammar packs. I do not have a vocePath set as it is not necessary quite yet. It will likely be necessary once I have an active event_listener setup.
 
-If you want to setup an executable file read this: http://www.excelsior-usa.com/articles/java-to-exe.html
+If you want to setup an executable file read this: http://www.excelsior-usa.com/articles/java-to-exe.html or http://stackoverflow.com/questions/147181/how-can-i-convert-my-java-program-to-an-exe-file
 
 I think the .bat will suffice for my needs. I want to run this on a Raspberry Pi 2 so, I just need it to execute once and it'll run in the background constantly
