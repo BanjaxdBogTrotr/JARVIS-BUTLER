@@ -11,7 +11,7 @@ public class SpeechRecognition
 	
 	public static void main(String[] args)
 	{		
-		String vocePath = "C:/Users/Sean/Desktop/Java Bin/voce-0.9.1/lib";
+		String vocePath = ".";
 		boolean initSynthesis = true;
 		boolean initRecognition = true;
 		String grammarPath = "";
@@ -61,12 +61,12 @@ public class SpeechRecognition
 	{
          Utils.log("debug", "Shutting down...");
                  
-          if (null != mSynthesizer)
+          if (mSynthesizer != null)
          {
              mSynthesizer.destroy();
          }
  
-         if (null != mRecognizer)
+         if (mRecognizer != null)
          {
              mRecognizer.destroy();
          }
@@ -76,7 +76,7 @@ public class SpeechRecognition
  
      public static void synthesize(String message)
      {
-             if (null == mSynthesizer)
+             if (mSynthesizer == null)
              {
                      Utils.log("warning", "synthesize called before " 
                          + "synthesizer was initialized.  Request will be ignored.");
@@ -90,7 +90,7 @@ public class SpeechRecognition
  
      public static void stopSynthesizing()
      {
-             if (null == mSynthesizer)
+             if (mSynthesizer == null)
              {
                      Utils.log("warning", "stopSynthesizing called before " 
                      + "synthesizer was initialized.  Request will be ignored.");
@@ -102,7 +102,7 @@ public class SpeechRecognition
  
      public static int getRecognizerQueueSize()
      {
-             if (null == mRecognizer)
+             if (mRecognizer == null)
              {
                      Utils.log("warning", "getRecognizerQueueSize "
                  + "called before recognizer was initialized.  Returning " 
@@ -115,7 +115,7 @@ public class SpeechRecognition
  
      public static String popRecognizedString()
      {
-             if (null == mRecognizer)
+             if (mRecognizer == null)
              {
                      Utils.log("warning", "popRecognizedString "
                  + "called before recognizer was initialized.  Returning " 
@@ -129,7 +129,7 @@ public class SpeechRecognition
 	
 	public static void setRecognizerEnabled(boolean e)
 	{
-	        if (null == mRecognizer)
+	        if (mRecognizer == null)
 	        {
 	                Utils.log("warning", "setRecognizerEnabled "
 	                        + "called before recognizer was initialized.  Request " 
@@ -143,7 +143,7 @@ public class SpeechRecognition
 	
 	public static boolean isRecognizerEnabled()
 	{
-	         if (null == mRecognizer)
+	         if (mRecognizer == null)
 	         {
 	                 Utils.log("warning", "isRecognizerEnabled "
 	                         + "called before recognizer was initialized.  Returning " 
