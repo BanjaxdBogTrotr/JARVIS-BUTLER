@@ -215,6 +215,7 @@ public class SpeechRecognizer implements Runnable
 	/// Deallocates speech recognizer.
 	public void destroy()
 	{
+		Utils.log("debug", "Shutting down Speech Recognizer.");
 		// This function call will shut down everything, including the 
 		// recognition thread.
 		setEnabled(false);
